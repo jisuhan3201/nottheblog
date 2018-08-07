@@ -19,6 +19,10 @@ urlpatterns = [
         "users/",
         include("not_the_blog.users.urls", namespace="users"),
     ),
+    path(
+        "posts/",
+        include("not_the_blog.posts.urls", namespace="posts"),
+    ),
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
 ] + static(
